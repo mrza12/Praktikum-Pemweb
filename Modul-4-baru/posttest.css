@@ -1,0 +1,42 @@
+
+body{
+    margin: 0.5;
+    padding: 0.5;
+    background-color: rgb(242, 236, 190);
+    }
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(154, 59, 59);
+    } 
+nav h1 span{
+    color: white;
+    }
+ul{
+    display: flex;
+    list-style: none;
+    }
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    margin-right: 30px;
+    }
+h1{
+    margin-left: 100px;
+    }
+
+h3{
+    font-style: oblique;
+    color: rgb(154, 59, 59);
+    }
+
+span{
+    color: rgb(192, 130, 97);
+    }
+figcaption{
+    font-style: oblique;
+    color: rgb(154, 59, 59);
+}
