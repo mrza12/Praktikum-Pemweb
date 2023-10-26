@@ -1,0 +1,91 @@
+
+body{
+    margin: 0.5;
+    padding: 0.5;
+    background-color: rgb(61, 23, 13);
+    }
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(194, 143, 59);
+    } 
+nav h1 span{
+    color: white;
+    }
+header ul{
+    display: flex;
+    list-style: none;
+    }
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+img {
+    border: 25px solid white;
+    height: 400px; width: 500px;
+}
+    
+nav h1{
+    margin-left: 50px;
+    color: whitesmoke;
+    font-family: 'Caveat', cursive;
+    }
+
+span{
+    color: rgb(192, 130, 97);
+    }
+figcaption{
+    font-style: oblique;
+    color: white;
+}
+
+h1 {
+    color: rgb(194, 143, 59);
+    font-family: 'Permanent Marker', cursive;
+}
+
+div{
+    background-color: rgb(194, 143, 59);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 20px;
+    border: 5px solid white;
+    margin-right: 250px;
+    margin-left: 250px;
+    padding: 5px;
+}
+
+.kepala{
+    margin: 10px;
+    background-color: rgb(207, 165, 97) ;
+    border: 5px solid rgb(207, 165, 97);
+}
+
+div h3{
+    padding: 70px;
+    font-family: Helvetica;
+    margin: 1px;
+    text-align: center;
+    }
+
+div h4{
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-family: Helvetica;
+}
+
+i {
+    font-family: 'Caveat', cursive;
+}
+
+footer{
+    display: inline;
+    display: grid;
+    background-color: rgb(194, 143, 59);
+    color: white;
+}
