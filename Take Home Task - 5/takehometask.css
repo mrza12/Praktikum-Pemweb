@@ -1,0 +1,107 @@
+body {
+    font-family: 'Caveat', Courier, monospace;
+    color: white;
+    text-transform: uppercase;
+    background-color: rgb(61, 23, 13);
+}
+
+.kontainer{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "aside main"
+    "footer footer";
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.2fr 1fr 0.5fr;
+    box-sizing: border-box;
+    border: none black solid;
+
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: rgb(194, 143, 59);
+    padding: 20px;
+    margin-bottom: 10px;
+    grid-column: 1/4;
+    justify-content: space-between;
+    height: 50px;
+    border-radius: 20px 60px;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: rgb(207, 165, 97) ;
+    grid-column: 1/4;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 60px 20px;
+}  
+
+aside{
+    display: flex;
+    align-items: center;
+    float: left;
+    background-color: rgb(194, 143, 59);
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 30px 0 0 30px;
+}
+
+main{
+    float: right;
+    background-color:  rgb(194, 143, 59);
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 0 30px 30px 0;
+}
+
+footer{
+    background-color:  rgb(207, 165, 97) ;
+    grid-column: 1/4;
+    padding: 50px;
+    margin-top: 10px;
+    border-radius: 10px 10px 30px 30px;
+}
+
+/* mengatur css bagian dalam tag header */
+header ul{
+    display: flex;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+/* Mengatur css bagian aside */
+img {
+    border: 25px solid white;
+    height: 250px; width: 350px;
+}
+
+
+
+/* Mengatur css bagian footer */
+.vote{
+    float: inline-start;
+    border: 2px solid white;
+    padding: 20px;
+    width: 500px;
+    height: 200px;
+}
+
+.komen{
+    float: inline-end;
+    border: 2px solid white;
+    padding: 20px;
+    width: 500px;
+    height: 200px;
+}
