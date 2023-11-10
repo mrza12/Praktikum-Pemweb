@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="kontainer">
+  <header>
+    <h1>Silahkan Pilih Pesanan</h1>
+  </header>
+  <nav>
+      <img src="https://cdn0-production-images-kly.akamaized.net/o8vUi0at1gpExFL7LW8QyO7r9Co=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2763419/original/071857300_1553761217-shutterstock_1148354906.jpg" alt="bakso" />
+      <img src="https://asset.kompas.com/crops/t7prYe3XIGbIdFVZ7fB7poKyRxQ=/28x13:683x450/750x500/data/photo/2021/03/01/603cc1b4f13ab.jpg" alt="Kwetiaw" />
+      <img src="https://asset.kompas.com/crops/krSLAkJhiYmOL3g6b6c-x_9p1sI=/98x0:944x564/750x500/data/photo/2023/04/14/6438d1d8bc59b.jpeg" alt="Mie Ayam" />
+      <img src="https://merries.co.id/uploads/2019/10/bosan-dengan-chicken-katsu-bikin-saja-tuna-katsu-saus-lada-hitam.jpg" alt="katsu" />
+  </nav>
+  <main>
+  <section class="pemesanan">
+    <section class="form-pemesanan">
+      <table class="form">
+      <td>
+      <form id="order-form"> <!-- Tambahkan ID "order-form" pada form -->
+        <div class="data-pemesanan">
+          <div class="blok-makanan">
+            <label for="makanan">Makanan : </label>
+            <select name="makanan" id="makanan">
+              <option value="18000">Katsu Lada Hitam</option>
+              <option value="15000">Bakso</option>
+              <option value="16000">Mie Ayam</option>
+              <option value="13000">Kwetiaw</option>
+            </select>
+          </div>
+          <br>
+          <div class="blok-jumlah">
+            <label for="jumlah">Jumlah : </label>
+            <input type="number" name="jumlah" id="jumlah" />
+          </div>
+          <br>
+          <div class="blok-voucher">
+            <label for="voucher">Voucher : </label>
+            <input type="text" name="voucher" id="voucher" />
+          </div>
+        </div>
+        <br>
+        <div class="tombol">
+          <button id="submit-button">Submit</button> <!-- Tambahkan ID "submit-button" pada tombol -->
+        </div>
+      </form>
+      </td>
+      </table>
+    </section>
+    <div class="hasil">
+      <table>
+        <section class="result">
+          <p>Hasil pesanan:</p>
+          <p>Nama: <span id="name"></span></p>
+          <p>Jumlah: <span id="jumlah-desc"></span</p>
+          <p>Diskon: <span id="discount"></span></p>
+          <p>Harga: <span id="harga"></span></p>
+        </section>
+      </section>
+    </table>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; Praktikum-Pemweb Mirza.</p>
+  </footer>
+</div>
+</body>
+<script>
+  // Menambahkan event listener ketika halaman selesai dimuat
+  document.addEventListener("DOMContentLoaded", function () {
+    const orderForm = document.getElementById("order-form");
+    const nameDesc = document.getElementById("name");
+    const jumlahDesc = document.getElementById("jumlah-desc");
+    const discountDesc = document.getElementById("discount");
+    const hargaDesc = document.getElementById("harga");
+
+    orderForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Mencegah form untuk melakukan submit bawaan
+
+      // Mendapatkan nilai yang dipilih dari elemen form
+      const makananValue = parseInt(document.getElementById("makanan").value, 10);
+      const jumlahValue = parseInt(document.getElementById("jumlah").value, 10);
+      const voucherValue = document.getElementById("voucher").value;
+
+      // Logika pemrosesan data
+      let nama = "";
+      let totalDiscount = 0;
+      
+      if (makananValue === 18000) {
+        nama = "Katsu Lada Hitam";
+      } else if (makananValue === 15000) {
+        nama = "Bakso";
+      } else if (makananValue === 16000) {
+        nama = "Mie Ayam";
+      } else if (makananValue === 13000) {
+        nama = "Kwetiaw";
+      }
+
+      if (voucherValue === "KENYANGGILA") {
+        totalDiscount = 0.2;
+      }
+
+      let totalHarga = makananValue * jumlahValue;
+      totalDiscount *= totalHarga;
+      totalHarga -= totalDiscount;
+
+      // Menampilkan hasil ke dalam elemen di halaman
+      nameDesc.textContent = nama;
+      jumlahDesc.textContent = jumlahValue;
+      discountDesc.textContent = totalDiscount;
+      hargaDesc.textContent = totalHarga;
+    });
+  });
+</script>
+</html>
