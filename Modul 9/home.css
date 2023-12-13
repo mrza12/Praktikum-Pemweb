@@ -1,27 +1,28 @@
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(213, 206, 163);
-    color: white;
+    background-color: rgb(255, 237, 237);
+    color: black;
 }
 
 /* Mengatur Grid Tampilan Home */
 .grid{
     display: grid;
-    grid-template-areas: "header header header"
-                         "aside main nav "
-                         "aside footer footer";
-    grid-template-columns: 0.3fr 1fr auto;
+    grid-template-areas: "header header "
+                         "main main"
+                         "footer footer";
+    grid-template-columns: 0.5fr 0.5fr;
     grid-template-rows: 0.2fr 1fr 0.5fr;
-    gap: 20px;
 }
 /* Mengatur Header */
 header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     grid-area: header;
-    background-color: rgb(57, 62, 70);
+    background-color: rgb(48, 170, 241);
     padding: 20px;
     color: white;
-    border-radius: 60px 60px 10px 10px;
+    border-radius: 10px 10px 0 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -37,47 +38,26 @@ a {
     margin-right: 30px;
 }
 
-
-/* Mengatur Aside */
-
-aside{
-    display: grid; /* Menggunakan CSS Grid untuk elemen aside */
-    grid-template-rows: auto auto; /* Menentukan dua baris, masing-masing mengikuti konten (auto) */
-    grid-area: aside;
-    background-color: rgb(109, 152, 134);
-    padding: 20px;
-    border-radius: 10px 0px 0px 60px;
-}
-
-
 /* Mengatur nav dan main */
 main{
     align-items: center;
     grid-area: main;
-    background-color: rgb(109, 152, 134);
+    background-color: rgb(255, 237, 237);
     padding: 20px;
-}
-
-nav{
-    align-items: center;
-    grid-area: nav;
-    background-color: rgb(109, 152, 134);
-    padding: 20px;
-    border-radius: 0px 10px 0px 0px; 
 }
 
 /* Mengatur Footer */
 footer{
     grid-area: footer;
-    background-color: rgb(57, 62, 70);
-    padding: 50px;
-    border-radius: 0px 0px 60px 0px; 
+    background-color:  rgb(48, 170, 241);
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px; 
 }
 
 /* mengatur img */
 img{
-    width: 280px;
-    height: 200px;
+    width: 350px;
+    height: 500px;
     border: 10px solid white;
 }
 
@@ -105,4 +85,20 @@ figcaption{
 
 .cc{
     clear: both;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 252px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: rgb(39, 180, 20);
 }

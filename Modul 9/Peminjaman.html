@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman</title>
+    <link rel="stylesheet" href="peminjaman.css">
+</head>
+<body>
+<div class="container">
+        <form action="peminjaman.php" method="post">
+        <h2 style="text-align: center;">Perpustakaan Online</h2>
+        <br>
+            <label for="nama">Username</label>
+            <input type="text" name="nama" required><br>
+            <label for="nama">Nama Lengkap Peminjaman</label>
+            <input type="text" name="nama" required><br>
+            <label for="action">Pilih</label>
+            <select name="Kategori" id="Kategori"> 
+                <option value="Peminjaman">Peminjaman</option>
+                <option value="Pengembalian">Pengembalian</option>
+                <option value="Pembelian">Pembelian</option>
+            </select>
+            <br>
+            <label for="buku">Pilih Buku</label>
+            <select name="Kategori" id="Kategori"> 
+                <option value="Sejarah">Sejarah</option>
+                <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                <option value="Matematika">Matematika</option>
+            </select>
+            <br>            
+            <button type="button" onclick="pinjamBuku()">Pinjam</button>
+            <button type="button" onclick="window.location.href='home.html'">Kembali</button>
+        </form>
+    </div>
+    <script>
+        function pinjamBuku() {
+        var nama = document.getElementById("nama-peminjam").value;
+        var kategori = document.getElementById("kategori-buku").value;
+
+        // Validasi data
+        if (nama == "" || kategori == "") {
+          alert("Mohon lengkapi data peminjaman!");
+          return;
+        } 
+    }
+    </script>
+</body>
+</html>
